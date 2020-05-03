@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  text-align: -webkit-center;
+}
+
+.form {
+  height: 70px;
+}
+
+.block {
+  width: 50%;
+}
+
+.block__form {
+  margin-top: 50px;
+  width: 70%;
+  height: auto;
+  background-color: #ebe4e4;
+  -webkit-box-shadow: 0 0 5px 0 black;
+          box-shadow: 0 0 5px 0 black;
+}
+
+.block__form-input {
+  width: 70%;
+  height: 30px;
+  margin-top: 18px;
+}
+
+.block__form-btn {
+  height: 30px;
+}
+
+.block__list-elem {
+  margin: 15px 0 15px 10px;
+  list-style: none;
+}
+
+.block__list {
+  margin-left: 20px;
+}
+
+.block__list-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block__list-elem {
+  position: relative;
+  text-align: left;
+}
+
+.cross-line {
+  text-decoration: line-through;
+  color: green;
+  opacity: 0.7;
+}
+
+.block__list-delete {
+  position: absolute;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  width: 15%;
+  height: 20px;
+}
+/*# sourceMappingURL=style.css.map */
