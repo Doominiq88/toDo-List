@@ -19,15 +19,11 @@ body {
     height: 70px;
 }
 
-.block {
-    width: 50%;
-}
-
 .block__form {
     margin-top: 50px;
-    width: 70%;
+    width: 80%;
     height: auto;
-    background-color: rgb(235, 228, 228);
+    background-color: rgb(238, 236, 236);
     box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 1.0);
 }
 
@@ -41,13 +37,22 @@ body {
     height: 30px;
 }
 
+input[value] {
+    padding-left: 10px;
+    opacity: .8;
+}
+
 .block__list-elem {
     margin: 15px 0 15px 10px;
     list-style: none;
 }
 
+.block__list-date {
+    font-size: 14px;
+}
+
 .block__list {
-    margin-left: 20px;
+    width: 78%;
 }
 
 .block__list-wrap {
@@ -57,6 +62,7 @@ body {
 }
 
 .block__list-elem {
+    width: 66%;
     position: relative;
     text-align: left;
 }
@@ -75,4 +81,14 @@ body {
     border-radius: 3px;
     width: 15%;
     height: 20px;
+}
+
+.list__elem-btn {
+    width: 20px;
+    height: 20px;
+}
+
+.list__elem-edit {
+    height: 20px;
+    width: 70px;
 }
