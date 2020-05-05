@@ -38,9 +38,38 @@ body {
   height: 30px;
 }
 
-input[value] {
+.done-chekbox[value] {
   padding-left: 10px;
   opacity: .8;
+}
+
+.label-1 {
+  color: #23bd23;
+}
+
+.label-2 {
+  color: #c0cf37;
+}
+
+.label-3 {
+  color: #f3130b;
+}
+
+.list__elem-prior {
+  width: 20px;
+  height: 20px;
+}
+
+.prior-low {
+  background-color: #23bd23;
+}
+
+.prior-medium {
+  background-color: #c0cf37;
+}
+
+.prior-high {
+  background-color: #f3130b;
 }
 
 .block__list-elem {
