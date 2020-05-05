@@ -27,17 +27,22 @@ form.addEventListener('submit', (event) => {
     const editBtn = createElement('button', 'list__elem-edit');
     const checkBox = createElement('input', 'done-checkbox');
     const elementPriority = createElement('div', 'list__elem-prior');
-    const wrapPriority = document.createElement('div', 'wrap__prior');
+    const wrapPriority = createElement('div', 'wrap__prior');
     const inputElement1 = createElement('input', 'input-1');
     const inputElement2 = createElement('input', 'input-2');
     const inputElement3 = createElement('input', 'input-3');
-
-
+    const labelElement1 = createElement('label', 'label-1');
+    const labelElement2 = createElement('label', 'label-2');
+    const labelElement3 = createElement('label', 'label-3');
 
     closeBtn.id = "list__elem-btn";
     inputElement1.type = "radio";
     inputElement2.type = "radio";
     inputElement3.type = "radio";
+    inputElement1.name = "priopity";
+    inputElement2.name = "priopity";
+    inputElement3.name = "priopity";
+
     checkBox.type = "checkbox";
     checkBox.id = "item_1";
 
@@ -48,15 +53,24 @@ form.addEventListener('submit', (event) => {
     wrap.append(checkBox);
     wrap.append(newElement);
     wrap.append(wrapPriority);
+    wrapPriority.append(labelElement1);
     wrapPriority.append(inputElement1);
+    wrapPriority.append(labelElement2);
     wrapPriority.append(inputElement2);
+    wrapPriority.append(labelElement3);
     wrapPriority.append(inputElement3);
+
+
+
     wrap.append(editBtn);
     wrap.append(closeBtn);
     // }
 
     closeBtn.innerHTML = 'x';
     editBtn.innerHTML = 'Edit';
+    labelElement1.innerHTML = 'low'
+    labelElement2.innerHTML = 'medium'
+    labelElement3.innerHTML = 'high'
 
 
     // add date
@@ -65,9 +79,16 @@ form.addEventListener('submit', (event) => {
 
     newElement.innerHTML = input.value;
 
+    // remove class
     closeBtn.addEventListener('click', (event) => event.target.parentElement.remove());
 
-    wrap.addEventListener('change', (event) => event.target.nextElementSibling.classList.toggle('cross-line'));
+    // done task
+    wrap.addEventListener('change', (event) => {
+        if (event.target.classList.contains('done-checkbox'))
+
+        { event.target.nextElementSibling.classList.toggle('cross-line') }
+
+    });
 
     // contentEditable
     editBtn.addEventListener('click', (event) => {
@@ -89,3 +110,8 @@ form.addEventListener('submit', (event) => {
 
 
 });
+
+
+// вопросы
+// Как реализовать редактирование?
+// for не цепляется к label ?
