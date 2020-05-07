@@ -115,3 +115,4 @@ form.addEventListener('submit', (event) => {
 // вопросы
 // Как реализовать редактирование?
 // for не цепляется к label ?
+
