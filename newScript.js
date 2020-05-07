@@ -16,6 +16,15 @@ const small = document.querySelector('.priority')
 
 const listRadio = document.querySelectorAll('.form-check-input')
 
+const btnSuccess = document.querySelector('.btn-success');
+console.log(btnSuccess);
+ 
+
+   btnSuccess.addEventListener('click', () =>{
+      console.log('да');
+   });
+   
+
 let priority;
 let style;
 
@@ -62,7 +71,7 @@ listRadio.forEach((element)=>{
             <i class="fas fa-ellipsis-v"></i>
         </button>
         <div class="dropdown-menu p-2 flex-column" aria-labelledby="dropdownMenuItem1">
-            <button type="button" class="btn btn-success w-100">Complete</button>
+            <button type="button" id="button-success" class="btn btn-success w-100">Complete</button>
             <button type="button" class="btn btn-info w-100 my-2">Edit</button>
             <button type="button" class="btn btn-danger w-100">Delete</button>
         </div>
