@@ -18,11 +18,11 @@ const listRadio = document.querySelectorAll('.form-check-input')
 
 const btnSuccess = document.querySelector('.btn-success');
 console.log(btnSuccess);
- 
+console.log('да');
 
-   btnSuccess.addEventListener('click', () =>{
-      console.log('да');
-   });
+   // btnSuccess.addEventListener('click', () =>{
+   //    console.log('да');
+   // });
    
 
 let priority;
