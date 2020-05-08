@@ -16,14 +16,11 @@ const small = document.querySelector('.priority')
 
 const listRadio = document.querySelectorAll('.form-check-input')
 
-const btnSuccess = document.querySelector('.btn-success');
-console.log(btnSuccess);
-console.log('да');
+const btnSuccess = document.getElementById('button-success');
 
-   // btnSuccess.addEventListener('click', () =>{
-   //    console.log('да');
-   // });
-   
+const example = document.getElementById('button-success');
+console.log(example);
+
 
 let priority;
 let style;
@@ -71,12 +68,18 @@ listRadio.forEach((element)=>{
             <i class="fas fa-ellipsis-v"></i>
         </button>
         <div class="dropdown-menu p-2 flex-column" aria-labelledby="dropdownMenuItem1">
-            <button type="button" id="button-success" class="btn btn-success w-100">Complete</button>
+            <button type="button" id="button-success" onclick="buttonClick (this)" class="btn btn-success w-100">Complete</button>
             <button type="button" class="btn btn-info w-100 my-2">Edit</button>
-            <button type="button" class="btn btn-danger w-100">Delete</button>
+            <button type="button" onclick="deleteClick (this)" class="btn btn-danger  w-100">Delete</button>
         </div>
     </div>
     `
+    if (example) {
+      btnSuccess.addEventListener('click', () => {
+          console.log('да');
+          console.log(example);
+       }); 
+    }
     li.innerHTML = template;
     return li;
  };
@@ -93,3 +96,11 @@ function clearText() {
    inputText.value = '';
    
 };
+
+function buttonClick (element) {
+let completeTask = document.querySelector('.task');
+completeTask.style.textDecoration = "line-through";
+}
+
+
+
